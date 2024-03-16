@@ -25,7 +25,7 @@ public class GetListOfOrdersTest {
         ValidatableResponse response = orderClient.get(10);
         int statusCodeResponse = response.extract().statusCode();
         List<Object> orders = response.extract().jsonPath().getList("orders");
-        Assert.assertEquals("Статус кода != " + 200, statusCodeResponse, 200);
+        Assert.assertEquals("Вернулся неподходящий для автотеста код ответа", statusCodeResponse, 200);
         Assert.assertFalse(orders.isEmpty());
     }
 }

@@ -47,7 +47,7 @@ public class CourierCreateRequestValidationTest {
         ValidatableResponse invalidCourierResponse = courierClient.create(new Courier(login, password));
         //Проверяем что код 400 и message
         int invalidCourierStatusCode = invalidCourierResponse.extract().statusCode();
-        Assert.assertEquals("Статус кода != 400", invalidCourierStatusCode, 400);
+        Assert.assertEquals("Вернулся неподходящий для автотеста код ответа", invalidCourierStatusCode, 400);
         String messageForInvalid = invalidCourierResponse.extract().path("message");
         Assert.assertEquals(messageForInvalid, message);
     }

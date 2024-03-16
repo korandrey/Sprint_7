@@ -44,7 +44,7 @@ public class CourierCreateTest {
         //Получаем значение ключа "ok" из боди респонса
         boolean statusInJsonResponse = response.extract().path("ok");
         //Проверяем код ответа
-        Assert.assertEquals("Статус кода != 201", statusCode, 201);
+        Assert.assertEquals("Вернулся неподходящий для автотеста код ответа", statusCode, 201);
         //проверяем полученное значение в боди
         Assert.assertTrue("Значение ключа 'ok' в JSON != true", statusInJsonResponse);
         //Смотрим логин нашего курьера(что курьер создан)
@@ -56,7 +56,7 @@ public class CourierCreateTest {
         //Проверяем, что id не равно нулю
         Assert.assertNotEquals("Значения не должны быть равны: value1=" + id + ", value2=" + 0, 0, id);
         //Проверяем код ответа
-        Assert.assertEquals("Статус кода != 200", loginStatusCode, 200);
+        Assert.assertEquals("Вернулся неподходящий для автотеста код ответа", loginStatusCode, 200);
     }
 
     //Проверяется в тесте duplicateCourierCannotBeCreated
@@ -68,7 +68,7 @@ public class CourierCreateTest {
         ValidatableResponse courierResponse = courierClient.create(courier);
         //получаем статус код
         int statusCode = courierResponse.extract().statusCode();
-        Assert.assertEquals("Статус кода != 201", statusCode, 201);
+        Assert.assertEquals("Вернулся неподходящий для автотеста код ответа", statusCode, 201);
         //Смотрим логин нашего курьера(что курьер создан)
         ValidatableResponse loginResponse = courierClient.login(CourierCredentials.from(courier));
         //Получаем из ответа id
@@ -77,7 +77,7 @@ public class CourierCreateTest {
         ValidatableResponse duplicateCourierResponse = courierClient.create(courier);
         //Проверяем, что код ответа 409
         int duplicateStatusCode = duplicateCourierResponse.extract().statusCode();
-        Assert.assertEquals("Статус кода != 409", duplicateStatusCode, 409);
+        Assert.assertEquals("Вернулся неподходящий для автотеста код ответа", duplicateStatusCode, 409);
         //Проверям, что в боди есть "message": "Этот логин уже используется"
         String messageForDuplicate = duplicateCourierResponse.extract().path("message");
         Assert.assertEquals(messageForDuplicate, "Этот логин уже используется. Попробуйте другой.");
