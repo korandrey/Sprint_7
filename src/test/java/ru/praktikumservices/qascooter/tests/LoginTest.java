@@ -50,6 +50,6 @@ public class LoginTest {
         //Получаем из ответа id
         id = loginResponse.extract().path("id");
         //Проверяем, что id не равно нулю
-        assert (id != 0) : "Значения не должны быть равны: value1=" + id + ", value2=" + 0;
+        Assert.assertNotEquals("Значения не должны быть равны: value1=" + id + ", value2=" + 0, 0, id);
     }
 }

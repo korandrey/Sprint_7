@@ -54,7 +54,7 @@ public class CourierCreateTest {
         //Получаем код ответа
         int loginStatusCode = loginResponse.extract().statusCode();
         //Проверяем, что id не равно нулю
-        assert (id != 0) : "Значения не должны быть равны: value1=" + id + ", value2=" + 0;
+        Assert.assertNotEquals("Значения не должны быть равны: value1=" + id + ", value2=" + 0, 0, id);
         //Проверяем код ответа
         Assert.assertEquals("Статус кода != 200", loginStatusCode, 200);
     }
