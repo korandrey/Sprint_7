@@ -1,11 +1,11 @@
-package ru.praktikum_services.qa_scooter.tests;
+package ru.praktikumservices.qascooter.tests;
 
 import io.qameta.allure.Feature;
 import io.restassured.response.ValidatableResponse;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import ru.praktikum_services.qa_scooter.order.OrderClient;
+import ru.praktikumservices.qascooter.order.OrderClient;
 
 import java.util.List;
 

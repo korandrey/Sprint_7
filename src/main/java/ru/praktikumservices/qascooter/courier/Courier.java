@@ -1,4 +1,4 @@
-package ru.praktikum_services.qa_scooter.courier;
+package ru.praktikumservices.qascooter.courier;
 
 public class Courier {
     private String login;

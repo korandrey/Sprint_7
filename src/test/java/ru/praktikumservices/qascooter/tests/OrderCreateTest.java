@@ -1,4 +1,4 @@
-package ru.praktikum_services.qa_scooter.tests;
+package ru.praktikumservices.qascooter.tests;
 
 import io.qameta.allure.Feature;
 
@@ -8,8 +8,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import ru.praktikum_services.qa_scooter.order.Order;
-import ru.praktikum_services.qa_scooter.order.OrderClient;
+import ru.praktikumservices.qascooter.order.Order;
+import ru.praktikumservices.qascooter.order.OrderClient;
 
 @RunWith(Parameterized.class)
 public class OrderCreateTest {

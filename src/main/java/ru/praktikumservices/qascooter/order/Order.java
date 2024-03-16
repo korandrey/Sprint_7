@@ -1,4 +1,4 @@
-package ru.praktikum_services.qa_scooter.order;
+package ru.praktikumservices.qascooter.order;
 
 public class Order {
     private String firstName;

@@ -1,4 +1,4 @@
-package ru.praktikum_services.qa_scooter.tests;
+package ru.praktikumservices.qascooter.tests;
 
 import io.qameta.allure.Feature;
 import io.qameta.allure.Issue;
@@ -8,9 +8,9 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import ru.praktikum_services.qa_scooter.courier.Courier;
-import ru.praktikum_services.qa_scooter.courier.CourierClient;
-import ru.praktikum_services.qa_scooter.courier.CourierCredentials;
+import ru.praktikumservices.qascooter.courier.Courier;
+import ru.praktikumservices.qascooter.courier.CourierClient;
+import ru.praktikumservices.qascooter.courier.CourierCredentials;
 
 @RunWith(Parameterized.class)
 public class LoginRequestValidationTest {

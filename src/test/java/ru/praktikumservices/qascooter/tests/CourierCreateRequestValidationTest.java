@@ -1,4 +1,4 @@
-package ru.praktikum_services.qa_scooter.tests;
+package ru.praktikumservices.qascooter.tests;
 
 import io.qameta.allure.Feature;
 import io.restassured.response.ValidatableResponse;
@@ -7,8 +7,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-import ru.praktikum_services.qa_scooter.courier.Courier;
-import ru.praktikum_services.qa_scooter.courier.CourierClient;
+import ru.praktikumservices.qascooter.courier.Courier;
+import ru.praktikumservices.qascooter.courier.CourierClient;
 
 
 @RunWith(Parameterized.class)

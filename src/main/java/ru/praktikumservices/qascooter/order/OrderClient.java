@@ -1,8 +1,8 @@
-package ru.praktikum_services.qa_scooter.order;
+package ru.praktikumservices.qascooter.order;
 
 import io.qameta.allure.Step;
 import io.restassured.response.ValidatableResponse;
-import ru.praktikum_services.qa_scooter.RestClient;
+import ru.praktikumservices.qascooter.RestClient;
 
 import static io.restassured.RestAssured.given;
 
