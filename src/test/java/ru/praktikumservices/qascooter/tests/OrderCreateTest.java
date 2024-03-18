@@ -59,6 +59,6 @@ public class OrderCreateTest {
         int statusCodeResponse = validOrderResponse.extract().statusCode();
         Assert.assertEquals("Статус кода != " + 201, statusCodeResponse, 201);
         int trackInResponse = validOrderResponse.extract().path("track");
-        assert (trackInResponse != 0) : "Значения не должны быть равны: value1=" + trackInResponse + ", value2=" + 0;
+        Assert.assertNotEquals("Значения не должны быть равны: value1=" + trackInResponse + ", value2=" + 0, 0, trackInResponse);
     }
 }
