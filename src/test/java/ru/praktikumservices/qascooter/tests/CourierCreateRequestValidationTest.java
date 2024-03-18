@@ -49,6 +49,6 @@ public class CourierCreateRequestValidationTest {
         int invalidCourierStatusCode = invalidCourierResponse.extract().statusCode();
         Assert.assertEquals("Вернулся неподходящий для автотеста код ответа", invalidCourierStatusCode, 400);
         String messageForInvalid = invalidCourierResponse.extract().path("message");
-        Assert.assertEquals(messageForInvalid, message);
+        Assert.assertEquals(message, messageForInvalid);
     }
 }

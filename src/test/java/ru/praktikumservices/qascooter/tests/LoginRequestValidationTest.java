@@ -54,6 +54,6 @@ public class LoginRequestValidationTest {
         int statusCodeResponse = invalidCourierResponse.extract().statusCode();
         Assert.assertEquals("Статус кода != " + statusCode, statusCodeResponse, statusCode);
         String messageForInvalid = invalidCourierResponse.extract().path("message");
-        Assert.assertEquals(messageForInvalid, message);
+        Assert.assertEquals(message, messageForInvalid);
     }
 }
