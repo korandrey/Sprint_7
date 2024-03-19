@@ -57,7 +57,7 @@ public class OrderCreateTest {
     public void validOrderCreationRequest() {
         ValidatableResponse validOrderResponse = orderClient.create(new Order(firstName, lastName, address, metroStation, phone, deliveryDate, comment, rentTime, color));
         int statusCodeResponse = validOrderResponse.extract().statusCode();
-        Assert.assertEquals("Статус кода != " + 201, statusCodeResponse, 201);
+        Assert.assertEquals("Вернулся неподходящий для автотеста код ответа", 201, statusCodeResponse);
         int trackInResponse = validOrderResponse.extract().path("track");
         Assert.assertNotEquals("Значения не должны быть равны: value1=" + trackInResponse + ", value2=" + 0, 0, trackInResponse);
     }

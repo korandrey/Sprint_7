@@ -40,13 +40,13 @@ public class LoginTest {
         //Получаем код ответа
         int statusCode = response.extract().statusCode();
         //Проверяем код ответа
-        Assert.assertEquals("Статус кода != 201", statusCode, 201);
+        Assert.assertEquals("Вернулся неподходящий для автотеста код ответа", 201, statusCode);
         //Смотрим логин нашего курьера(что курьер создан)
         ValidatableResponse loginResponse = courierClient.login(CourierCredentials.from(courier));
         //Получаем код ответа
         int loginStatusCode = loginResponse.extract().statusCode();
         //Проверяем код ответа
-        Assert.assertEquals("Статус кода != 200", loginStatusCode, 200);
+        Assert.assertEquals("Вернулся неподходящий для автотеста код ответа", 200, loginStatusCode);
         //Получаем из ответа id
         id = loginResponse.extract().path("id");
         //Проверяем, что id не равно нулю

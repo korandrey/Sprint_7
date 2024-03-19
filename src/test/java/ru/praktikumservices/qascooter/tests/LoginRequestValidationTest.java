@@ -52,7 +52,7 @@ public class LoginRequestValidationTest {
     public void invalidCourierCreationRequestIsNotAllowed() {
         ValidatableResponse invalidCourierResponse = courierClient.login(CourierCredentials.from(new Courier(login, password)));
         int statusCodeResponse = invalidCourierResponse.extract().statusCode();
-        Assert.assertEquals("Статус кода != " + statusCode, statusCodeResponse, statusCode);
+        Assert.assertEquals("Вернулся неподходящий для автотеста код ответа", statusCode, statusCodeResponse);
         String messageForInvalid = invalidCourierResponse.extract().path("message");
         Assert.assertEquals(message, messageForInvalid);
     }
